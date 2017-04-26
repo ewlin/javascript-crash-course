@@ -1,6 +1,6 @@
 ## JavaScript crash course
 
-#### Primitives (basic values)
+### Primitives (basic values)
 #### There are a few basic types of values you can have in JS: 
 ##### *Strings*: Any combination of text (text must be inside either "" or '')
 ```javascript
@@ -33,7 +33,7 @@
 10 % 3 // 1
 ```
 
-#### Logic
+### Logic
 
 ##### *Boolean* (true or false)
 ```javascript
@@ -85,7 +85,7 @@ lessThan10(25)
 ```
 
 
-#### Objects and more complicated types (composite)
+### *Objects* and more complicated types (composite)
 
 #### *Array* (a collection of values)
 ```javascript
