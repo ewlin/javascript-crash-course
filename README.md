@@ -33,6 +33,22 @@
 10 % 3 // 1
 ```
 
+### Variable
+You can store a value in a variable. Think of the variable as a container with a label. 
+
+```javascript
+var thisIsAVariable; //empty container with a label "thisIsAVariable"
+thisIsAVariable = "Eric"; //assigning the variable with a value; 
+```
+
+If you now ask for the variable `thisIsAVariable`, you'll get the value! 
+    thisIsAVariable // "Eric"
+    
+You can store any type of value in a variable. Remember: so far, we've only seen two types of values: numbers and strings
+
+
+
+
 ### Logic
 
 ##### *Boolean* (true or false)
@@ -146,6 +162,9 @@ var eric = {
         alert(this.name + " was born on " + this.birthday + ". " + pronoun + " has " + this.eyeColor + " eyes.");
     }
 }; 
+
+//To call the method: 
+eric.printBio(); 
 
 
 ```
