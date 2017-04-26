@@ -42,6 +42,9 @@ You can store a value in a variable. Think of the variable as a container with a
 ```javascript
 var thisIsAVariable; //empty container with a label "thisIsAVariable"
 thisIsAVariable = "Eric"; //assigning the variable with a value; 
+
+//Shorthand
+var thisIsAnotherVariable = 1000; 
 ```
 
 If you now ask for the variable `thisIsAVariable`, you'll get the value! `thisIsAVariable // "Eric"`
@@ -127,6 +130,7 @@ var meAndMyself = {
     over18: true,
 }; 
 
+//You can also store functions in a variable. A function is also just a value
 var printBio = function(person) {
     var pronoun; 
     
