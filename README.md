@@ -147,6 +147,7 @@ printBio(meAndMyself);
 ```
 #### *Methods*
 ##### Methods are functions that are associated with an object
+In methods, the `this` keyword refers to the object itself. 
 
 Same example from earlier: 
 ```javascript
