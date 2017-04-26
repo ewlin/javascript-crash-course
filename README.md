@@ -35,7 +35,7 @@
 
 #### Logic
 
-##### Boolean (true or false)
+##### *Boolean* (true or false)
 ```javascript
 true 
 false 
@@ -65,8 +65,8 @@ if (num < 10) {
 }
 ```
 
-#### Function 
-#####Wrap the above in reusable code! (AKA a function)
+#### *Function*
+##### Wrap the above in reusable code! (AKA a function)
 ```javascript
 function lessThan10(num) {
     if (num < 10) {
@@ -87,12 +87,12 @@ lessThan10(25)
 
 #### Objects and more complicated types (composite)
 
-#### Array (a collection of values)
+#### *Array* (a collection of values)
 ```javascript
 var anArrayOfNumbers = [1, 3, 5, 7]; 
 ```
 
-#### Object (a collection of values with an associated key. Think of this as a dictionary entry. The word is the key, and the value is the definition)
+#### *Object* (a collection of values with an associated key. Think of this as a dictionary entry. The word is the key, and the value is the definition)
 ```javascript
 var objectFormat = {
     key1 : value1, 
