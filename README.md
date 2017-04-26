@@ -61,7 +61,7 @@ false || false || (1 === 1) // true
 var num = 5; 
 
 if (num < 10) {
-	alert(num + " is less than 10!"); 
+    alert(num + " is less than 10!"); 
 }
 ```
 
@@ -94,6 +94,7 @@ var anArrayOfNumbers = [1, 3, 5, 7];
 
 #### *Object* (a collection of values with an associated key. Think of this as a dictionary entry. The word is the key, and the value is the definition)
 ```javascript
+//Object literal (JavaScript allows you to create objects like this. There are also ways to create objects with a 'factory'. Think of this as a blueprint for objects of the same kind.)
 var objectFormat = {
     key1 : value1, 
     key2 : value2, 
@@ -117,8 +118,34 @@ var printBio = function(person) {
         pronoun = "She"; 
     }
     
-    alert(person.name + " was born on " + person.birthday + ". " + pronoun + " has " + person.eyeColor + " eyes.")
+    alert(person.name + " was born on " + person.birthday + ". " + pronoun + " has " + person.eyeColor + " eyes.");
 }; 
 
 printBio(meAndMyself); 
+```
+#### *Methods*
+##### Methods are functions that are associated with an object
+
+Same example from earlier: 
+```javascript
+var eric = {
+    name: "Eric L.",
+    birthday: "April 7",
+    eyeColor: "brown",
+    gender: "m",
+    over18: true,
+    printBio: function() {
+        var pronoun; 
+    
+        if (this.gender === "m") {
+            pronoun = "He"; 
+        } else if (this.gender === "f") {
+            pronoun = "She"; 
+        }
+    
+        alert(this.name + " was born on " + this.birthday + ". " + pronoun + " has " + this.eyeColor + " eyes.");
+    }
+}; 
+
+
 ```
