@@ -1,5 +1,8 @@
 ## JavaScript crash course
 
+### Comments
+In JavaScript, a line that starts with `//` is a comment. This doesn't get evaluated as code. 
+
 ### Primitives (basic values)
 #### There are a few basic types of values you can have in JS: 
 ##### *Strings*: Any combination of text (text must be inside either "" or '')
@@ -41,8 +44,7 @@ var thisIsAVariable; //empty container with a label "thisIsAVariable"
 thisIsAVariable = "Eric"; //assigning the variable with a value; 
 ```
 
-If you now ask for the variable `thisIsAVariable`, you'll get the value! 
-    thisIsAVariable // "Eric"
+If you now ask for the variable `thisIsAVariable`, you'll get the value! `thisIsAVariable // "Eric"`
     
 You can store any type of value in a variable. Remember: so far, we've only seen two types of values: numbers and strings
 
