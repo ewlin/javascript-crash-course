@@ -131,6 +131,7 @@ anArrayOfNumbers[lastItemIndex];
 #### *Object* (a collection of values with an associated key. Think of this as a dictionary entry. The word is the key, and the value is the definition)
 ```javascript
 //Object literal (JavaScript allows you to create objects like this. There are also ways to create objects with a 'factory'. Think of this as a blueprint for objects of the same kind.)
+//For more info, search for JS classes/constructors and prototypes. Caution: this can be quite confusing at first. Try to master the object literal first. 
 var objectFormat = {
     key1 : value1, 
     key2 : value2, 
