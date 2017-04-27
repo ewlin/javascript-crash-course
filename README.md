@@ -91,6 +91,9 @@ if (num < 10) {
 
 #### *Function*
 ##### Wrap the above in reusable code! (AKA a function)
+Function declarations need a `function` keyword, followed by the name of the function, (placeholder parameters inside quotation marks), and then the body of the function wrapped by 2 {} (Curly braces) 
+
+Functions that return an output need a `return` statement at the end of the function body. Not all functions need to return a value/output. 
 ```javascript
 function lessThan10(num) {
     if (num < 10) {
@@ -114,6 +117,15 @@ lessThan10(25)
 #### *Array* (a collection of values)
 ```javascript
 var anArrayOfNumbers = [1, 3, 5, 7]; 
+///To access a particular item or value from the array: 
+arrayName[index]; 
+///In our `anArrayOfNumbers`, to access the first value: 
+anArrayOfNumbers[0]; 
+///For the last item: 
+anArrayOfNumbers[anArrayOfNumbers.length - 1]; 
+///Or, with a more readable format: 
+var lastItemIndex = anArrayOfNumbers.length - 1; 
+anArrayOfNumbers[lastItemIndex]; 
 ```
 
 #### *Object* (a collection of values with an associated key. Think of this as a dictionary entry. The word is the key, and the value is the definition)
@@ -133,6 +145,7 @@ var meAndMyself = {
     over18: true,
 }; 
 
+
 //You can also store functions in a variable. A function is also just a value
 var printBio = function(person) {
     var pronoun; 
@@ -147,6 +160,25 @@ var printBio = function(person) {
 }; 
 
 printBio(meAndMyself); 
+```
+
+Accessing object values. You have two options: 
+
+```javascript
+var object = {
+    key1: "value1", 
+    key2: 2
+}
+```
+
+You can use square brackets (like using an index in arrays)
+*BUT...The key must be in string form.*
+```javascript
+object["key1"]; // "value1"
+```
+*Or you can use DOT notation*
+```javascript
+object.key2; // 2
 ```
 #### *Methods*
 ##### Methods are functions that are associated with an object
@@ -175,6 +207,9 @@ var eric = {
 
 //To call the method: 
 eric.printBio(); 
+
+//Alternatively, you can also do this: 
+eric["printBio"](); 
 
 
 ```
