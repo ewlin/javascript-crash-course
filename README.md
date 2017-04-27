@@ -1,5 +1,8 @@
 ## JavaScript crash course
 
+### Reading for Class 6 & 7: 
+[A History of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/)
+
 ### Comments
 In JavaScript, a line that starts with `//` is a comment. This doesn't get evaluated as code. 
 
