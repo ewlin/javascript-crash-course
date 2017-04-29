@@ -57,8 +57,8 @@ you haven't seen before: `arr.push(item)`
    Think about what values you'll need to push (or add) and what array you're adding to. Read the function that I started for you carefully. 
    
 2) Remember, you're using `arr.forEach()` on your input. Here's a reminder of 
-how .forEach() works on the array. Remember, forEach() takes a function as an argument, and that 
-and this is the function that's applied to each of the items in the array. 
+how .forEach() works on the array. forEach() takes a function as an argument, and then 
+this function is applied to each of the items in the array. 
 
 So for example: 
 ```javascript
