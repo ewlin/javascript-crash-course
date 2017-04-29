@@ -1,5 +1,158 @@
 ## JavaScript crash course
 
+### Exercises for Monday, May 1, 2017: 
+
+#### Try to do the problems in the short_exercises.js file first. If you finish those, try the more challenging Problem1 and Problem2. 
+
+If you even attempt these exercises, please save your work and push it to your Github account. 
+
+#### Problem 1: 
+
+*Directions:*
+
+Your job is to implement a function called `filterForEvens()` that takes an 
+array of integers as the argument (input) and returns (outputs) a new array with only the even numbers. 
+
+I started the function for you; you just need to fill in some parts: 
+
+##### PLEASE COMPLETE THE FUNCTION IN THE FILE 'problem1.js'
+```javascript
+function filterForEvens (arrayOfIntegers) {
+    var arrayOfEvens = []; //declare empty array 
+    
+    arrayOfIntegers.forEach(function(integer) {
+        //1. Fill in the rest of this function. 
+    }); 
+    
+    return arrayOfEvens; 
+}
+```
+
+Two examples of the completed function in action: 
+    
+1/
+```javascript
+filterForEvens([1,2,3,4,5,6]) // [2,4,6]
+```
+2/
+```javascript
+var someNumbers = [3,5,6,7,8,10,15,20]; 
+filterForEvens(someNumbers) // [6,8,10,20]
+```
+
+*Some hints:*
+
+1) You'll need to use an array method (a function that works on arrays) that
+you haven't seen before: `arr.push(item)`
+
+   You use .push() to add new items to the end of the array it's used on. 
+
+   So here's how you use it. If you have an array of strings `var states = ['New Jersey', 'New York', 'Connecticut']` and you want to add 
+'California' to the end of the array, you can say: 
+
+    `states.push('California');`
+
+   If you check the states array now, it should look like: `['New Jersey', 'New York', 'Connecticut', 'California']`
+
+   Think about what values you'll need to push (or add) and what array you're adding to. Read the function that I started for you carefully. 
+   
+2) Remember, you're using `arr.forEach()` on your input. Here's a reminder of 
+how .forEach() works on the array. Remember, forEach() takes a function as an argument, and that 
+and this is the function that's applied to each of the items in the array. 
+
+So for example: 
+```javascript
+[2,4,6,8,10].forEach(function(number) {
+    console.log(number/2); 
+}); 
+```
+would print out the numbers 1 2 3 4 and 5 in the console. 
+
+The 'number' parameter in the function `...function(number) {...`
+is simply a placeholder reference to each item in the array. You can use whatever placeholder name you want, but whatever you use, this is the name
+you use to reference that value or item in the function body. In our case, it's just the one line `console.log(number/2)`. That's why we get an output of 5 numbers that's
+half the value of the 5 numbers in the original array. 
+
+
+3) You'll need to use an `if (...)` statement somewhere, since you're testing for whether a number is even or not. 
+
+4) You'll need to use a `===` operator somewhere. Think about how to test if a number is an even integer or not. 
+
+    
+#### Problem 2: 
+
+*Directions:*
+
+Your job is to implement a function called `isValidCreditCardNumber()` that takes a string of digits and determines 
+whether or not the string is a valid Mastercard, Visa, or AMEX credit card. 
+
+This is a common problem in apps in general: users will input some information, and our app has to make sure the input is
+a reasonable value. This is known as input validation. 
+
+Obviously, in real life, the validation of a CC number is considerably more complicated than what this function needs to do, but this exercise is meant to 
+give you a taste of how the tools you learned on Wednesday can be applied to testing whether an input is valid. 
+
+I started the function for you; you just need to fill in some parts: 
+```javascript
+function isValidCreditCardNumber (cardNumber) {
+    //1. How do you get the first 2 characters of a string? Replace the 'REPLACE WITH SOMETHING...' part.
+    var first2Digits = REPLACE WITH SOMETHING...; 
+    
+    //2. How do you get the length of a string? Replace the 'REPLACE WITH SOMETHING...' part with some code. 
+    var numberOfDigits = REPLACE WITH SOMETHING...; 
+
+    //We only take Mastercard, Visa, and AMEX cards...
+    var validFirst2Digits = ['40','41','42','43','44','45','46','47','48','49','51','52','53','54','55','34','37']; 
+    
+    
+    if(/* 3. test for if cardNumber has 16 characters AND the first 2 characters are one of the valid first 2 digits of a credit card */) {
+        return true; 
+    } else {
+        throw new Error("credit card number is invalid"); 
+    }
+}
+```
+
+##### PLEASE COMPLETE THE FUNCTION IN THE FILE 'problem2.js'
+
+A few examples of the completed function in action: 
+    
+1/
+```javascript
+isValidCreditCardNumber("4359009288394736") // true -- has 16 numbers and the first two numbers are valid
+```
+2/
+```javascript
+isValidCreditCardNumber("0059009288394736") // results in an error being thrown, since first two numbers are not in the validFirst2Digits array. 
+```
+3/
+```javascript
+isValidCreditCardNumber("691096933940") // also invalid, since number of digits is wrong
+```
+
+*Some hints:*
+
+1) For Part 1, you need to figure out how to extract and store the first two characters (digits) of the input string into the variable `first2Digits`. 
+Strings have a .substring method that's used like this: `"Eric".substring(1,3); // "ri"`
+
+   Read more about it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring).
+
+2) For Part 2, simply find the number of characters in the string (we saw this in class, but Google if you forgot)
+
+3) Part 3 is a little trickier. Here, you have to test for two conditions: 
+
+   *a)* Whether or not the input string is 16 characters 
+   
+   AND
+   
+   *b)* Whether or not the first two characters matches one of the valid combo of digits that's stored inside the array `validFirst2Digits`
+   
+    Part 3b requires you to take your input string's first two digits (now stored in the variable `first2Digits` if you finished Part 1 correctly)
+    and see if there's a match with an item inside `validFirst2Digits`. **There are several ways to do this. WE HAVEN'T DONE THIS EXPLICITLY IN CLASS, BUT I EXPECT YOU TO TRY TO FIND OUT HOW USING GOOGLE/RESEARCH.** 
+    
+    You'll probably need to use the `===` operator to compare two values. Finally, remember: You're testing whether both conditions are true, and that requires the joining together of two conditionals and you need to use another of the logicial operators we saw briefly in class in order to do that.
+    (i.e. both conditions need to be true for the card number to be valid)
+
 ### Reading for Class 6 & 7: 
 [A History of JavaScript](https://auth0.com/blog/a-brief-history-of-javascript/)
 
